@@ -1,6 +1,6 @@
 [package]
 name = "stretch"
-version = "0.1.7"
+version = "0.2.2"
 authors = ["Emil Sjölander <emil@visly.app>"]
 edition = "2018"
 include = ["src/**/*", "Cargo.toml"]
@@ -31,4 +31,12 @@ panic = 'abort'
 
 [[bench]]
 name = "generated"
+path = "benches/generated/mod.rs"
 harness = false
+
+[[bench]]
+name = "complex"
+harness = false
+
+[workspace]
+members = [ "scripts/gentest" ]
